@@ -21,7 +21,6 @@ import {
   Settings,
   Palette,
   CircleHelp,
-  Github,
   RefreshCw,
   KeyRound,
 } from "lucide-react";
@@ -50,7 +49,6 @@ import dingtalkIcon from "../assets/channels/dingtalk.svg";
 import wecomIcon from "../assets/channels/wecom.svg";
 import styles from "./AvatarDropdown.module.less";
 
-const GITHUB_URL = "https://github.com/TencentCloud/Octop";
 const APP_OAUTH_KINDS = new Set(["feishu", "dingtalk", "wecom"]);
 
 function oauthProviderIcon(kind: string): ReactNode {
@@ -365,17 +363,6 @@ export default function AvatarDropdown({
       >
         <CircleHelp size={16} strokeWidth={1.8} />
         <span>{t("account.helpFeedback")}</span>
-      </a>
-
-      <a
-        className={styles.menuItem}
-        href={GITHUB_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        onClick={() => setMenuOpen(false)}
-      >
-        <Github size={16} strokeWidth={1.8} />
-        <span>{t("account.projectUrl")}</span>
       </a>
 
       <button type="button" className={styles.menuItem} onClick={openSettings}>
